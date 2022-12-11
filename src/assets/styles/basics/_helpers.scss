@@ -1,0 +1,184 @@
+// Flex
+.flex {
+    display: flex;
+    &.justify-between{
+        justify-content: space-between;
+    }
+    &.justify-center{
+        justify-content: center;
+    }
+    &.items-center{
+        align-items: center;
+    }
+    &.flex-col{
+        flex-direction: column;
+    }
+    &.flex-wrap{
+        flex-wrap: wrap;
+    }
+}
+
+
+// Text
+.vertical-text {
+    writing-mode: tb-rl;
+    transform: rotate(-180deg);
+}
+
+/* list */
+
+.clean-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* OTHERS */
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.round {
+    border-radius: 5px;
+}
+
+/* SPACING */
+
+.p-1 {
+    padding: 0.5rem;
+}
+
+.p-2 {
+    padding: 1rem;
+}
+
+.p-3 {
+    padding: 2rem;
+}
+
+.p-4 {
+    padding: 4rem;
+}
+
+.px-1 {
+    padding-inline: 0.5rem;
+}
+
+.px-2 {
+    padding-inline: 1rem;
+}
+
+.px-3 {
+    padding-inline: 2rem;
+}
+
+.px-4 {
+    padding-inline: 4rem;
+}
+
+.py-1 {
+    padding-block: 0.5rem;
+}
+
+.py-2 {
+    padding-block: 1rem;
+}
+
+.py-3 {
+    padding-block: 2rem;
+}
+
+.py-4 {
+    padding-block: 4rem;
+}
+
+.m-1 {
+    margin: 0.5rem;
+}
+
+.m-2 {
+    margin: 1rem;
+}
+
+.m-3 {
+    margin: 2rem;
+}
+
+.m-4 {
+    margin: 4rem;
+}
+
+.mx-1 {
+    margin-inline: 0.5rem;
+}
+
+.mx-2 {
+    margin-inline: 1rem;
+}
+
+.mx-3 {
+    margin-inline: 2rem;
+}
+
+.mx-4 {
+    margin-inline: 4rem;
+}
+
+.my-1 {
+    margin-block: 0.5rem;
+}
+
+.my-2 {
+    margin-block: 1rem;
+}
+
+.my-3 {
+    margin-block: 2rem;
+}
+
+.my-4 {
+    margin-block: 4rem;
+}
+
+.gap-1 {
+    gap: 0.5rem;
+}
+
+.gap-2 {
+    gap: 1rem;
+}
+
+.gap-3 {
+    gap: 2rem;
+}
+
+.gap-4 {
+    gap: 4rem;
+}
+
+// Aspect ratios
+
+// .ratio-16-9 {
+//     @include aspect-ratio(100, 56);
+// }
+
+// .ratio-square {
+//     @include aspect-ratio(100, 100);
+// }
+
+// .ratio-card {
+//     @include aspect-ratio(100, 80);
+// }
+
+// .ratio-poster {
+//     @include aspect-ratio(100, 150);
+// }
