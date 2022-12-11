@@ -1,4 +1,6 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -35,5 +37,10 @@ img {
 
 button,
 input {
-    cursor: pointer;
+  cursor: pointer;
+}
+
+#root {
+  background-color: #0b2434;
+  padding: 30px 0;
 }
