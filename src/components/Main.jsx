@@ -1,8 +1,20 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Die from "./Die";
+import Confetti from "react-confetti";
 
 function Main() {
   const [dice, setDice] = useState(allNewDice());
+  const [isFinishGame, setIsFinishGame] = useState(false);
+
+  useEffect(() => {
+    console.log("Dice state changed");
+    let isGameOver = true;
+    const valueOfConstNum = dice[0].value;
+    dice.map((die) => {
+      if (!die.isHeld || die.value !== valueOfConstNum) isGameOver = false;
+    });
+    if (isGameOver) setIsFinishGame(true);
+  }, [dice]);
 
   function allNewDice() {
     let array = [];
@@ -13,6 +25,10 @@ function Main() {
   }
 
   function roll() {
+    if(isFinishGame){
+      setDice(allNewDice())
+      setIsFinishGame(false)
+    }
     setDice((prevState) =>
       prevState.map((dice) => {
         return dice.isHeld ? dice : generateNewDie();
@@ -55,8 +71,9 @@ function Main() {
       <p className="instructions">Roll until all dice are the same. Click each die to freeze it at its current value between rolls.</p>
       <section className="die-container">{dieSection}</section>
       <button onClick={roll} className="main__btn">
-        Roll
+        {isFinishGame ? "New Game" : "Roll"}
       </button>
+      {isFinishGame && <Confetti />}
     </main>
   );
 }
